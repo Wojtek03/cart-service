@@ -1,0 +1,21 @@
+meta {
+  name: add
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8082/carts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1,
+    "status": "active",
+    "createdAt": "2024-09-14T12:45:46.844Z",
+    "updatedAt": "2024-09-14T12:45:46.844Z"
+  }
+  
+}
