@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: wojtekbier03
+      author: Wojtek03
       changes:
         - createTable:
             tableName: cart
@@ -32,7 +32,7 @@ databaseChangeLog:
 
   - changeSet:
       id: 2
-      author: wojtekbier03
+      author: Wojtek03
       changes:
         - createTable:
             tableName: cart_items
@@ -72,4 +72,3 @@ databaseChangeLog:
             referencedTableName: cart
             referencedColumnNames: id
             onDelete: CASCADE
-

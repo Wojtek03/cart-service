@@ -71,11 +71,17 @@ public class CartService {
         return cartMapper.toDto(updatedCart);
     }
 
-
     public List<CartItemDto> getCartItems(Long cartId) {
         return cartItemRepository.findByCartId(cartId)
                 .stream()
                 .map(cartItemMapper::toDto)
                 .collect(Collectors.toList());
+    }
+
+    public CartDto getCartById(Long cartId) {
+        Cart cart = cartRepository.findById(cartId)
+                .orElseThrow(() -> new CartNotFoundException("Cart not found with id: " + cartId));
+
+        return cartMapper.toDto(cart);
     }
 }

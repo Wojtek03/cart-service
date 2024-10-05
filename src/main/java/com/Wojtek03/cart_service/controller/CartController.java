@@ -35,4 +35,10 @@ public class CartController {
         List<CartItemDto> cartItems = cartService.getCartItems(cartId);
         return new ResponseEntity<>(cartItems, HttpStatus.OK);
     }
+
+    @GetMapping("/{cartId}")
+    public ResponseEntity<CartDto> getCartById(@PathVariable("cartId") Long cartId) {
+        CartDto cart = cartService.getCartById(cartId);
+        return new ResponseEntity<>(cart, HttpStatus.OK);
+    }
 }
